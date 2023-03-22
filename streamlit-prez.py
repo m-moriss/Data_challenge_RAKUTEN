@@ -1,17 +1,17 @@
-import streamlit as st
+#import streamlit as st
 #from streamlit_option_menu import option_menu
-import streamlit.components.v1 as html
-from PIL import Image, ImageOps
-import pandas as pd
-from dataset import (
-    load_dataset,
-    process_text,
-    load_logisitc_regression_model,
-    load_vgg16_cnn_model,
-    get_image,
-)
-import plotly.express as px
-import numpy as np
+#import streamlit.components.v1 as html
+#from PIL import Image, ImageOps
+#import pandas as pd
+#from dataset import (
+#    load_dataset,
+#    process_text,
+#    load_logisitc_regression_model,
+#    load_vgg16_cnn_model,
+#    get_image,
+#)
+#import plotly.express as px
+#import numpy as np
 
 #  pip install streamlit-option-menu
 #  pip install beautifulsoup4 tensorflow
