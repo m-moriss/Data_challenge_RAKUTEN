@@ -1,6 +1,7 @@
 streamlit
 streamlit_option_menu
 streamlit.components.v1
+python3.9
 PIL
 pandas
 dataset
