@@ -1,5 +1,5 @@
 import streamlit as st
-from streamlit_option_menu import option_menu
+#from streamlit_option_menu import option_menu
 import streamlit.components.v1 as html
 from PIL import Image, ImageOps
 import pandas as pd
@@ -13,8 +13,8 @@ from dataset import (
 import plotly.express as px
 import numpy as np
 
-pip install streamlit-option-menu
-pip install beautifulsoup4 tensorflow
+#  pip install streamlit-option-menu
+#  pip install beautifulsoup4 tensorflow
 
 # Screens:
 # * Introduction du projet
