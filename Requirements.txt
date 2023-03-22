@@ -1,0 +1,8 @@
+streamlit
+streamlit_option_menu
+streamlit.components.v1
+PIL
+pandas
+dataset
+plotly.express
+numpy
