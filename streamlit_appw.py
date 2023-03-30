@@ -164,7 +164,7 @@ Notre objectif est de **construire un système de classification automatique des
 
 """)
 
-    with Image.open(r'images/annonce.webp') as example_annonce:
+    with Image.open(r'annonce.webp') as example_annonce:
         col1, col2, col3 = st.columns([1, 5, 1])
         col2.image(example_annonce, use_column_width=True, caption="Exemple d'annonce de produit Rakuten")
 
@@ -172,8 +172,8 @@ Notre objectif est de **construire un système de classification automatique des
 A partir des données de l'annonce telles l'image, le titre et la description, notre système devra prédire la catégorie générale du produit.
 """)
 
-    texte_annonce = Image.open(r'images/texte_annonce.webp')
-    image_annonce = Image.open(r'images/image_annonce.webp')
+    texte_annonce = Image.open(r'texte_annonce.webp')
+    image_annonce = Image.open(r'image_annonce.webp')
     cols = st.columns([1, 1, 1, 5, 1])
     cols[1].image(image_annonce, use_column_width=True, caption="Image extraite de l'annonce")
     cols[3].image(texte_annonce, use_column_width=True, caption="Texte extrait de l'annonce")
@@ -336,7 +336,7 @@ Résultat : **nous ajouterons une variable nommé "catégorie" qui pourra faire 
 Bien que toutes les annonces de produit aient un titre, 36% d'entre elles n'ont pas de description.
 """)
 
-    with Image.open(r'images/piechart_description.webp') as img:
+    with Image.open(r'piechart_description.webp') as img:
         col1, col2, col3 = st.columns([5, 3, 5])
         col2.image(img, use_column_width=True)
 
@@ -344,7 +344,7 @@ Bien que toutes les annonces de produit aient un titre, 36% d'entre elles n'ont 
 Et l'on observe de grosses disparités au sein des catégories, avec la catégorie Livres, mangas, romans contenant le moins de descriptions associées aux annonces.
 """)
         
-    with Image.open(r'images/barchart_description.webp') as img:
+    with Image.open(r'barchart_description.webp') as img:
         col1, col2, col3 = st.columns([2, 6, 2])
         col2.image(img, use_column_width=True)
 
@@ -353,7 +353,7 @@ Si l’on regarde le nombre de lettre qui composent les titres des annonces, il 
 """)
 
         
-    with Image.open(r'images/title_char.webp') as img:
+    with Image.open(r'title_char.webp') as img:
         col1, col2, col3 = st.columns([2, 6, 2])
         col2.image(img, use_column_width=True)
 
@@ -448,7 +448,7 @@ Explication dataframe après preprocessing
 """)
 
     #with Image.open('C:/Users/Morisseau1/AppData/Roaming/Python/Python310/site-packages/streamlit/streamlit/images/Listes_modeles_ML.png') as img:
-    with Image.open('images/Listes_modeles_ML.PNG') as img:        
+    with Image.open('Listes_modeles_ML.PNG') as img:        
         col1, col2, col3 = st.columns([2, 2, 2])
         col2.image(img, use_column_width=True)
 
@@ -458,7 +458,7 @@ Explication dataframe après preprocessing
 """)
 
     #with Image.open('C:/Users/Morisseau1/AppData/Roaming/Python/Python310/site-packages/streamlit/streamlit/images//Matrice_RNN1.png') as img:
-    with Image.open('images//Matrice_RNN1.PNG') as img:
+    with Image.open('Matrice_RNN1.PNG') as img:
         col1, col2, col3 = st.columns([2, 2, 2])
         col2.image(img, use_column_width=True)
 
@@ -483,7 +483,7 @@ Voici son architecture:
 """)
 
 
-    with Image.open('images/best_image.png') as img:
+    with Image.open('best_image.png') as img:
         col1, col2, col3 = st.columns([2, 2, 2])
         col2.image(img, use_column_width=True)
     
@@ -491,7 +491,7 @@ Voici son architecture:
     Nous obtenons une accuracy de 0.5375 sur notre jeu de test, ainsi que la matrice de confusion suivante.""")
 
 
-    with Image.open('images/image_accuracy.png') as img:
+    with Image.open('image_accuracy.png') as img:
         col1, col2, col3 = st.columns([2, 6, 2])
         col2.image(img, use_column_width=True)
 
@@ -505,7 +505,7 @@ Et les f1-scores suivants:
 """)
 
     #with Image.open('C:/Users/Morisseau1/AppData/Roaming/Python/Python310/site-packages/streamlit/streamlit/images/vgg16_f1score.png') as img:
-    with Image.open('images/vgg16_f1score.PNG') as img:
+    with Image.open('vgg16_f1score.PNG') as img:
         col1, col2, col3 = st.columns([2, 2, 2])
         col2.image(img, use_column_width=True)
         
@@ -523,7 +523,7 @@ if choose == "Algorithme multimodal":
 Nous avons réuni les modèles grâce à une méthode ensembliste utilisant une moyenne pondérée, dont nous avons fixé les poids à la main, sans entraînement.
 """)
 
-    with Image.open(r'images/union_modele.png') as img:
+    with Image.open(r'union_modele.png') as img:
         col1, col2, col3 = st.columns([2, 6, 2])
         col2.image(img, use_column_width=True)
 
@@ -536,7 +536,7 @@ Nous avons fixés à la main les poids W_texte a 0.8 et W_image a 0.5 (les accur
 Sur le jeu de données de test, le classifieur multimodal obtient une accuracy de 0.827, ainsi que la matrice de confusion suivante.
 """)
 
-    with Image.open(r'images/multimodal.webp') as img:
+    with Image.open(r'multimodal.webp') as img:
         col1, col2, col3 = st.columns([2, 6, 2])
         col2.image(img, use_column_width=True)
 
@@ -544,7 +544,7 @@ Sur le jeu de données de test, le classifieur multimodal obtient une accuracy d
 Les f1-score sur chaque classe sont les suivants:
 """)
 
-    with Image.open(r'images/union_f1score.png') as img:
+    with Image.open(r'union_f1score.png') as img:
         col1, col2, col3 = st.columns([2, 3, 2])
         col2.image(img, use_column_width=True)
 
