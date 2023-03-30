@@ -10,5 +10,3 @@ nltk
 scikit-learn
 wordcloud
 tensorflow
-io
-html.parser
