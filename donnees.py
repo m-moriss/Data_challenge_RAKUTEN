@@ -30,9 +30,9 @@ def strip_tags(html):
 @st.experimental_singleton
 def load_dataset():
     # On charge le dataset d'entrainement
-    X_train = pd.read_csv("rakuten/X_train.csv", index_col=0)
-    y_train = pd.read_csv("rakuten/Y_train.csv", index_col=0)
-    categories = pd.read_csv("rakuten/categories.csv", sep="\t")
+    X_train = pd.read_csv("X_train.csv", index_col=0)
+    y_train = pd.read_csv("Y_train.csv", index_col=0)
+    categories = pd.read_csv("categories.csv", sep="\t")
 
     categories_alphasort = categories.reset_index().astype(str).sort_values(by='prdtypecode').reset_index()
     categories_alphasort.drop(['index'], axis=1, inplace=True)
@@ -134,7 +134,7 @@ def load_vgg16_cnn_model(nb_of_classes):
 
 
 def get_image(image):
-  path = f"rakuten/image_train/{image}"
+  path = f"{image}"
   image = tf.keras.utils.load_img(
     path,
     grayscale=False,
