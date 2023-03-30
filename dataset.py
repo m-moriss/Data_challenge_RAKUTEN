@@ -59,7 +59,7 @@ def load_dataset():
 # Algorithme multimodal
 
 
-from sklearn.linear_model import LogisticRegression
+from scikit-learn.linear_model import LogisticRegression
 import pickle
 
 
