@@ -1,9 +1,0 @@
-streamlit
-streamlit_option_menu
-streamlit.components.v1
-python=3.9
-PIL
-pandas
-dataset
-plotly.express
-numpy
