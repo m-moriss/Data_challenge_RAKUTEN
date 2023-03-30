@@ -5,4 +5,5 @@ dataset
 Pillow
 streamlit
 streamlit-option-menu
+dataset
 nltk
