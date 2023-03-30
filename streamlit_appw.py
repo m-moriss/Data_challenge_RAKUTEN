@@ -3,7 +3,7 @@ from streamlit_option_menu import option_menu
 import streamlit.components.v1 as html
 from PIL import Image, ImageOps
 import pandas as pd
-import datasets
+from datasets import load_dataset
 #from datasets import load_dataset
 #from datasets import load_vgg16_cnn_model
 #from datasets import process_text
