@@ -4,6 +4,7 @@ import streamlit.components.v1 as html
 from PIL import Image, ImageOps
 import pandas as pd
 import datasets
+import load_dataset
 
 import plotly.express as px
 import numpy as np
