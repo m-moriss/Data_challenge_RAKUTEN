@@ -225,7 +225,7 @@ RAKUTEN a mis à disposition les jeux de données organisés de la façon suivan
             cols = st.columns([1, 1, 1, 1, 1])
             index=0
             for i, row in sample.iterrows():
-                filename = f"rakuten/image_train/image_{row.imageid}_product_{row.productid}.jpg"
+                filename = f"/image_train/image_{row.imageid}_product_{row.productid}.jpg"
                 #filename = f"C:/Users/Morisseau1/DSPP/Donnees/images (1)/images/image_train/image_{row.imageid}_product_{row.productid}.jpg"
                 image = Image.open(filename)
                 cols[index].image(image, use_column_width=True)
@@ -270,7 +270,7 @@ Résultat : **nous ajouterons une variable nommé "catégorie" qui pourra faire 
             cols = st.columns([1]*nb_sample)
             index=0
             for indice, row in sample.iterrows():
-                filename = f"rakuten/image_train/image_{row.imageid}_product_{row.productid}.jpg"
+                filename = f"image_train/image_{row.imageid}_product_{row.productid}.jpg"
                 #filename = f"C:/Users/Morisseau1/DSPP/Donnees/images (1)/images/image_train/image_{row.imageid}_product_{row.productid}.jpg"
                 image = Image.open(filename)
                 cols[index].image(image, use_column_width=True)
@@ -566,7 +566,7 @@ Les f1-score sur chaque classe sont les suivants:
     cols = st.columns([1]*nb_sample+[4])
     index=0
     for indice, row in sample.iterrows():
-        filename = f"rakuten/image_train/image_{row.imageid}_product_{row.productid}.jpg"
+        filename = f"image_train/image_{row.imageid}_product_{row.productid}.jpg"
         #filename = f"C:/Users/Morisseau1/DSPP/Donnees/images (1)/images/image_train/image_{row.imageid}_product_{row.productid}.jpg"
         image = Image.open(filename)
         cols[index].image(image, use_column_width=True)
@@ -581,7 +581,7 @@ Les f1-score sur chaque classe sont les suivants:
     cols = st.columns([1]*nb_sample+[4])
     index=0
     for indice, row in sample.iterrows():
-        filename = f"rakuten/image_train/image_{row.imageid}_product_{row.productid}.jpg"
+        filename = f"image_train/image_{row.imageid}_product_{row.productid}.jpg"
         #filename = f"C:/Users/Morisseau1/DSPP/Donnees/images (1)/images/image_train/image_{row.imageid}_product_{row.productid}.jpg"
         image = Image.open(filename)
         cols[index].image(image, use_column_width=True)
@@ -596,7 +596,7 @@ Les f1-score sur chaque classe sont les suivants:
     cols = st.columns([1]*nb_sample+[4])
     index=0
     for indice, row in sample.iterrows():
-        filename = f"rakuten/image_train/image_{row.imageid}_product_{row.productid}.jpg"
+        filename = f"image_train/image_{row.imageid}_product_{row.productid}.jpg"
         #filename = f"C:/Users/Morisseau1/DSPP/Donnees/images (1)/images/image_train/image_{row.imageid}_product_{row.productid}.jpg"
         image = Image.open(filename)
         cols[index].image(image, use_column_width=True)
@@ -642,7 +642,7 @@ if choose == "Démonstration":
         if annonce:
             row = X.loc[annonce]
             cols[2].write(f'<br><p class="titre_annonce_big">{row.designation}</p>', unsafe_allow_html=True)
-            cols[2].image(f"rakuten/image_train/{row.image}")
+            cols[2].image(f"image_train/{row.image}")
             if str(row.description) != "nan":
                 cols[2].write(row.description)
 
