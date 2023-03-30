@@ -1,7 +1,7 @@
 numpy
 pandas
 plotly
-dataset
+datasets
 Pillow
 streamlit
 streamlit-option-menu
