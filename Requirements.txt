@@ -1,8 +1,6 @@
 streamlit
-streamlit-option-menu
-streamlit.components.v1
 PIL
 pandas
 dataset
-plotly.express
+plotly
 numpy
