@@ -3,8 +3,7 @@ from streamlit_option_menu import option_menu
 import streamlit.components.v1 as html
 from PIL import Image, ImageOps
 import pandas as pd
-import datasets
-import load_dataset
+import datasets, load_datasets
 
 import plotly.express as px
 import numpy as np
