@@ -5,9 +5,4 @@ dataset
 Pillow
 streamlit
 streamlit-option-menu
-load_dataset
-process_text
-load_logisitc_regression_model
-load_vgg16_cnn_model
-get_image
 nltk
