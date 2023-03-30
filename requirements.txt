@@ -8,4 +8,3 @@ streamlit-option-menu
 dataset
 nltk
 scikit-learn
-load_dataset
