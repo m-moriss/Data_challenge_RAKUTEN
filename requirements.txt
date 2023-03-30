@@ -1,0 +1,7 @@
+numpy
+pandas
+plotly
+dataset
+Pillow
+streamlit
+streamlit-option-menu
