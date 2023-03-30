@@ -8,8 +8,7 @@ import datasets
 #from datasets import load_vgg16_cnn_model
 #from datasets import process_text
 #from datasets import load_logisitc_regression_model
-
-from datasets import get_image
+#from datasets import get_image
 
 import plotly.express as px
 import numpy as np
