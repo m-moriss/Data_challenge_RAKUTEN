@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import StringIO
+from StringIO import StringIO
 from html.parser import HTMLParser
 import nltk
 
