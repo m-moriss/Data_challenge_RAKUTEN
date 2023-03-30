@@ -1,6 +1,8 @@
 streamlit
 streamlit-option-menu
 PIL
+PIL.Image
+PIL.ImageOps
 pandas
 dataset
 plotly
