@@ -10,4 +10,3 @@ nltk
 scikit-learn
 wordcloud
 tensorflow
-StringIO
