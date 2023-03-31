@@ -3,13 +3,7 @@ from streamlit_option_menu import option_menu
 import streamlit.components.v1 as html
 from PIL import Image, ImageOps
 import pandas as pd
-#from donnees import (
-#    load_dataset,
-#    process_text,
-#    load_logisitc_regression_model,
-#    load_vgg16_cnn_model,
-#    get_image,
-#)
+
 
 #import streamlit as st
 import subprocess
@@ -17,6 +11,13 @@ import sys
 
 subprocess.run([f"{sys.executable}", "donnees.py"])
 
+from donnees import (
+    load_dataset,
+    process_text,
+    load_logisitc_regression_model,
+    load_vgg16_cnn_model,
+    get_image,
+)
 
 import plotly.express as px
 import numpy as np
