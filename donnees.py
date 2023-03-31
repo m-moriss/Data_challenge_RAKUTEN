@@ -3,6 +3,7 @@ import pandas as pd
 from io import StringIO
 from html.parser import HTMLParser
 import nltk
+from pathlib import Path
 
 nltk.download('stopwords')
 nltk.download('wordnet')
