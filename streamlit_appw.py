@@ -11,6 +11,12 @@ import pandas as pd
 #    get_image,
 #)
 
+#import streamlit as st
+import subprocess
+import sys
+
+subprocess.run([f"{sys.executable}", "donnees.py"])
+
 
 import plotly.express as px
 import numpy as np
