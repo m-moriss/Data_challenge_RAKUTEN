@@ -114,8 +114,6 @@ from tensorflow.keras.applications.vgg16 import VGG16, preprocess_input
 
 @st.experimental_singleton
 def load_vgg16_cnn_model(nb_of_classes):
-    
-            
 
     base_model = VGG16(weights='imagenet', include_top=False)
     for layer in base_model.layers:
