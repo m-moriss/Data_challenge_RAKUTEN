@@ -421,6 +421,48 @@ Nous avons réalisé les actions suivantes:
     st.write("""
 Les images ont été **réduites en résolution pour accelerer l'apprentissage des algorithmes.**
     """)
+    
+############################
+# Algorithmes sur le texte #
+############################
+
+if choose == "Algorithmes sur le texte":
+    st.markdown('<p class="page_title_1">Algorithmes sur le texte</p>', unsafe_allow_html=True)
+    st.write("""
+Explication dataframe après preprocessing
+""")
+
+
+    #df_Xtexte_origin = pd.read_csv('C:/Users/Morisseau1/AppData/Roaming/Python/Python310/site-packages/streamlit/streamlit/rakuten/df_Xtexte_origin.csv',sep=";",encoding='unicode_escape')
+    df_Xtexte_origin = pd.read_csv('df_Xtexte_origin.csv',sep=";",encoding='unicode_escape')
+
+    st.table(df_Xtexte_origin)
+
+
+    #df_Xtexte_modifie = pd.read_csv('C:/Users/Morisseau1/AppData/Roaming/Python/Python310/site-packages/streamlit/streamlit/rakuten/df_Xtexte_modifie.csv',sep=";",encoding='unicode_escape')
+    df_Xtexte_modifie = pd.read_csv('df_Xtexte_modifie.csv',sep=";",encoding='unicode_escape')
+    st.table(df_Xtexte_modifie)
+
+    st.markdown("<p class=\"page_title_2\">Modélisation</p>", unsafe_allow_html=True)
+
+    st.write("""Nous avons testés plusieurs modèles appliqués aux données textes parmi des modèles de **machine learning et modèles de deep learning :**
+""")
+
+    #with Image.open('C:/Users/Morisseau1/AppData/Roaming/Python/Python310/site-packages/streamlit/streamlit/images/Listes_modeles_ML.png') as img:
+    with Image.open('Listes_modeles_ML.PNG') as img:        
+        col1, col2, col3 = st.columns([2, 2, 2])
+        col2.image(img, use_column_width=True)
+
+    st.markdown("<p class=\"page_title_2\">Le meilleur modèle</p>", unsafe_allow_html=True)
+    st.write("""
+    Voici la matrice de confusion :
+""")
+
+    #with Image.open('C:/Users/Morisseau1/AppData/Roaming/Python/Python310/site-packages/streamlit/streamlit/images//Matrice_RNN1.png') as img:
+    with Image.open('Matrice_RNN1.PNG') as img:
+        col1, col2, col3 = st.columns([2, 2, 2])
+        col2.image(img, use_column_width=True)
+
 
  
 #########
