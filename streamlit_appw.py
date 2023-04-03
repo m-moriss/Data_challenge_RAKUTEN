@@ -7,9 +7,9 @@ import pandas as pd
 from donnees import (
     load_dataset,
     process_text,
-    load_logisitc_regression_model,
     #load_vgg16_cnn_model,
-    get_image,
+    #get_image,
+    load_logisitc_regression_model
 )
 
 import plotly.express as px
@@ -101,7 +101,7 @@ st.markdown("""
 
 X_train, y_train, categories, X, categories_numbered, categories_alphasort = load_dataset()
 logistic_regression_model = load_logisitc_regression_model()
-vgg16_cnn_model = load_vgg16_cnn_model(len(categories))
+#vgg16_cnn_model = load_vgg16_cnn_model(len(categories))
 
 ##################################
 # La barre de menu sur la gauche #
