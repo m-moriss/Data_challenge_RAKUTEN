@@ -683,7 +683,7 @@ if choose == "Démonstration":
             proba_unifie = ((weight_texte * proba_texte + weight_image * proba_image)/(weight_image + weight_texte))
             display_top_proba(proba_unifie)
     
-"""            
+          
 #########
 # Bilan #
 #########
