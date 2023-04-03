@@ -463,6 +463,101 @@ Explication dataframe après preprocessing
         col1, col2, col3 = st.columns([2, 2, 2])
         col2.image(img, use_column_width=True)
 
+#########################
+# Algorithme multimodal #
+#########################
+
+if choose == "Algorithme multimodal":
+    st.markdown('<p class="page_title_1">Algorithme multimodal</p>', unsafe_allow_html=True)
+
+    st.markdown("<p class=\"page_title_2\">Méthode ensembliste avec moyenne pondérée</p>", unsafe_allow_html=True)
+
+    st.write("""
+Nous avons réuni les modèles grâce à une méthode ensembliste utilisant une moyenne pondérée, dont nous avons fixé les poids à la main, sans entraînement.
+""")
+
+    with Image.open(r'union_modele.png') as img:
+        col1, col2, col3 = st.columns([2, 6, 2])
+        col2.image(img, use_column_width=True)
+
+    st.write("""
+Nous avons fixés à la main les poids W_texte a 0.8 et W_image a 0.5 (les accuracy respectives de chaque modèle).  
+""")
+
+        
+    st.write("""
+Sur le jeu de données de test, le classifieur multimodal obtient une accuracy de 0.827, ainsi que la matrice de confusion suivante.
+""")
+
+    with Image.open(r'multimodal.webp') as img:
+        col1, col2, col3 = st.columns([2, 6, 2])
+        col2.image(img, use_column_width=True)
+
+    st.write("""
+Les f1-score sur chaque classe sont les suivants:
+""")
+
+    with Image.open(r'union_f1score.png') as img:
+        col1, col2, col3 = st.columns([2, 3, 2])
+        col2.image(img, use_column_width=True)
+
+    st.markdown("<p class=\"page_title_2\">Analyse des classes mal prédites</p>", unsafe_allow_html=True)
+
+        
+    st.write("""
+    Les classes les moins bien prédites (plus bas f1-score) sont
+    * 1281-Jeux de société, confondus avec:
+      * 1280-Jeux type playmobil en entrée
+      * 1180-Figurines 2 en sortie
+""")
+
+    
+    st.markdown(f"<p><strong>Exemples d'annonces de la catégorie 1281-Jeux de société</strong></p>", unsafe_allow_html=True)
+    nb_sample=6
+    sample = X[y_train.prdtypecode == 1281].sample(nb_sample)
+    cols = st.columns([1]*nb_sample+[4])
+    index=0
+    for indice, row in sample.iterrows():
+        filename = f"image_train/image_{row.imageid}_product_{row.productid}.jpg"
+        #filename = f"C:/Users/Morisseau1/DSPP/Donnees/images (1)/images/image_train/image_{row.imageid}_product_{row.productid}.jpg"
+        image = Image.open(filename)
+        cols[index].image(image, use_column_width=True)
+        cols[index].write(f'<p class="titre_annonce">{row.designation[:50]}</p>', unsafe_allow_html=True)
+        #if str(row.description) != "nan":
+        #    cols[index].write(row.description[:100])
+        index += 1
+
+    st.markdown(f"<p><strong>Exemples d'annonces de la catégorie 1280-Jeux type playmobil</strong></p>", unsafe_allow_html=True)
+    nb_sample=6
+    sample = X[y_train.prdtypecode == 1280].sample(nb_sample)
+    cols = st.columns([1]*nb_sample+[4])
+    index=0
+    for indice, row in sample.iterrows():
+        filename = f"image_train/image_{row.imageid}_product_{row.productid}.jpg"
+        #filename = f"C:/Users/Morisseau1/DSPP/Donnees/images (1)/images/image_train/image_{row.imageid}_product_{row.productid}.jpg"
+        image = Image.open(filename)
+        cols[index].image(image, use_column_width=True)
+        cols[index].write(f'<p class="titre_annonce">{row.designation[:50]}</p>', unsafe_allow_html=True)
+        #if str(row.description) != "nan":
+        #    cols[index].write(row.description[:100])
+        index += 1
+
+    st.markdown(f"<p><strong>Exemples d'annonces de la catégorie 1180-Figurines 2</strong></p>", unsafe_allow_html=True)
+    nb_sample=6
+    sample = X[y_train.prdtypecode == 1180].sample(nb_sample)
+    cols = st.columns([1]*nb_sample+[4])
+    index=0
+    for indice, row in sample.iterrows():
+        filename = f"image_train/image_{row.imageid}_product_{row.productid}.jpg"
+        #filename = f"C:/Users/Morisseau1/DSPP/Donnees/images (1)/images/image_train/image_{row.imageid}_product_{row.productid}.jpg"
+        image = Image.open(filename)
+        cols[index].image(image, use_column_width=True)
+        cols[index].write(f'<p class="titre_annonce">{row.designation[:50]}</p>', unsafe_allow_html=True)
+        #if str(row.description) != "nan":
+        #    cols[index].write(row.description[:100])
+        index += 1
+        
+    st.write("""Il est difficile de faire la différence entre ces classes""")
 
  
 #########
