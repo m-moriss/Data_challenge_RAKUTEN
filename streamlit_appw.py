@@ -8,7 +8,7 @@ from donnees import (
     load_dataset,
     process_text,
     load_logisitc_regression_model,
-    load_vgg16_cnn_model,
+    #load_vgg16_cnn_model,
     get_image,
 )
 
