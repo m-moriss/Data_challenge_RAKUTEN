@@ -422,7 +422,7 @@ Nous avons réalisé les actions suivantes:
 Les images ont été **réduites en résolution pour accelerer l'apprentissage des algorithmes.**
     """)
 
-"""    
+   
 ############################
 # Algorithmes sur le texte #
 ############################
@@ -435,13 +435,13 @@ Explication dataframe après preprocessing
 
 
     #df_Xtexte_origin = pd.read_csv('C:/Users/Morisseau1/AppData/Roaming/Python/Python310/site-packages/streamlit/streamlit/rakuten/df_Xtexte_origin.csv',sep=";",encoding='unicode_escape')
-    df_Xtexte_origin = pd.read_csv('rakuten/df_Xtexte_origin.csv',sep=";",encoding='unicode_escape')
+    df_Xtexte_origin = pd.read_csv('df_Xtexte_origin.csv',sep=";",encoding='unicode_escape')
 
     st.table(df_Xtexte_origin)
 
 
     #df_Xtexte_modifie = pd.read_csv('C:/Users/Morisseau1/AppData/Roaming/Python/Python310/site-packages/streamlit/streamlit/rakuten/df_Xtexte_modifie.csv',sep=";",encoding='unicode_escape')
-    df_Xtexte_modifie = pd.read_csv('rakuten/df_Xtexte_modifie.csv',sep=";",encoding='unicode_escape')
+    df_Xtexte_modifie = pd.read_csv('df_Xtexte_modifie.csv',sep=";",encoding='unicode_escape')
     st.table(df_Xtexte_modifie)
 
     st.markdown("<p class=\"page_title_2\">Modélisation</p>", unsafe_allow_html=True)
