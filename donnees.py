@@ -111,7 +111,7 @@ def process_text(texte):
 import tensorflow as tf
 from tensorflow.keras import layers
 from tensorflow.keras.applications.vgg16 import VGG16, preprocess_input
-
+"""
 @st.experimental_singleton
 def load_vgg16_cnn_model(nb_of_classes):
     
@@ -132,7 +132,7 @@ def load_vgg16_cnn_model(nb_of_classes):
 
     model.load_weights("checkpoint_vgg16_3")
     return model
-
+"""
 
 
 def get_image(image):
