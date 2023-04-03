@@ -422,7 +422,7 @@ Nous avons réalisé les actions suivantes:
 Les images ont été **réduites en résolution pour accelerer l'apprentissage des algorithmes.**
     """)
 
-    
+"""    
 ############################
 # Algorithmes sur le texte #
 ############################
@@ -683,7 +683,7 @@ if choose == "Démonstration":
             proba_unifie = ((weight_texte * proba_texte + weight_image * proba_image)/(weight_image + weight_texte))
             display_top_proba(proba_unifie)
     
-            
+"""            
 #########
 # Bilan #
 #########
