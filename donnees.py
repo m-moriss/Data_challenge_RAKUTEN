@@ -134,7 +134,7 @@ def load_vgg16_cnn_model(nb_of_classes):
     return model
 """
 
-
+"""
 def get_image(image):
   path = f"/image_train/{image}"
   image = tf.keras.utils.load_img(
@@ -145,3 +145,4 @@ def get_image(image):
     interpolation='bilinear'
   )
   return tf.keras.preprocessing.image.img_to_array(image)
+"""
