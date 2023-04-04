@@ -32,7 +32,7 @@ def strip_tags(html):
 def load_dataset():
     # On charge le dataset d'entrainement
     X_train = pd.read_csv("X_train.csv", index_col=0)
-    y_train = pd.read_csv("y_train.csv", index_col=0)
+    y_train = pd.read_csv("Y_train.csv", index_col=0)
     categories = pd.read_csv("categories.csv", sep="\t")
 
     categories_alphasort = categories.reset_index().astype(str).sort_values(by='prdtypecode').reset_index()
@@ -47,7 +47,7 @@ def load_dataset():
 
  #   X["image"] = "image_" + X.imageid.astype(str) + "_product_" + X.productid.astype(str) + ".jpg"
     X["texte"] = X.designation + " " + X.description.fillna('').astype(str)
- #   X["orig_texte"] = X.designation + " " + X.description.fillna('').astype(str)
+    X["orig_texte"] = X.designation + " " + X.description.fillna('').astype(str)
     #X.drop(["productid", "imageid", "prdtypecode", "designation", "description"], axis=1, inplace=True)
  #   X.drop_duplicates(subset="texte", inplace=True)
     #X["texte"] = X.texte.apply(strip_tags)
