@@ -46,7 +46,7 @@ def load_dataset():
     X["categorie"] = X.prdtypecode.map(categories_numbered.number)
 
  #   X["image"] = "image_" + X.imageid.astype(str) + "_product_" + X.productid.astype(str) + ".jpg"
- #   X["texte"] = X.designation + " " + X.description.fillna('').astype(str)
+    X["texte"] = X.designation + " " + X.description.fillna('').astype(str)
  #   X["orig_texte"] = X.designation + " " + X.description.fillna('').astype(str)
     #X.drop(["productid", "imageid", "prdtypecode", "designation", "description"], axis=1, inplace=True)
  #   X.drop_duplicates(subset="texte", inplace=True)
