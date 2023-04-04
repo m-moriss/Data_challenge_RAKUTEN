@@ -226,7 +226,7 @@ RAKUTEN a mis à disposition les jeux de données organisés de la façon suivan
             cols = st.columns([1, 1, 1, 1, 1])
             index=0
             for i, row in sample.iterrows():
-                filename = f"Data_challenge_RAKUTEN/img_train/image_{row.imageid}_product_{row.productid}.jpg"
+                filename = f"image_{row.imageid}_product_{row.productid}.jpg"
                 #filename = f"C:/Users/Morisseau1/DSPP/Donnees/images (1)/images/image_train/image_{row.imageid}_product_{row.productid}.jpg"
                 image = Image.open(filename)
                 cols[index].image(image, use_column_width=True)
