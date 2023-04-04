@@ -290,7 +290,7 @@ Résultat : **nous ajouterons une variable nommé "catégorie" qui pourra faire 
 
     #df = pd.read_csv('C:/Users/Morisseau1/DSPP/Donnees/X.csv')
     #df_langues = pd.read_csv('C:/Users/Morisseau1/AppData/Roaming/Python/Python310/site-packages/streamlit/streamlit/rakuten/Repartition_langues.csv',sep=";")
-    df_langues = pd.read_csv('rakuten/Repartition_langues.csv',sep=";")
+    df_langues = pd.read_csv('Repartition_langues.csv',sep=";")
 
 
     class_distr = st.container()
