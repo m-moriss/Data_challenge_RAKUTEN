@@ -232,7 +232,7 @@ RAKUTEN a mis à disposition les jeux de données organisés de la façon suivan
                
                  path_image=pathlib.Path('image_train/image_{row.imageid}_product_{row.productid}.jpg')
                 # filename = f"image_train/image_{row.imageid}_product_{row.productid}.jpg"
-                 image = Image.open(filename)
+                 image = Image.open(path_image)
                  cols[index].image(image, use_column_width=True)
                  index += 1
 
