@@ -284,7 +284,7 @@ Résultat : **nous ajouterons une variable nommé "catégorie" qui pourra faire 
                 if str(row.description) != "nan":
                     cols[index].write(row.description[:300])
                 index += 1
-            category_image = f'images/categories-{"{:02d}".format(i)}n.webp'
+            category_image = f'categories-{"{:02d}".format(i)}n.webp'
             #st.markdown("<br><p class=\"page_title_3\">Nuage de mot et fréquence des mots de la catégorie</p></br>", unsafe_allow_html=True)
             st.markdown("<p><strong>Nuage de mot et fréquence des mots de la catégorie</strong></p>", unsafe_allow_html=True)    
             st.write("""Pour avoir une idée plus précise du contenu du texte des annonces par catégorie, **nous avons réalisé des nuages de mots et des histogrammes avec les mots les plus fréquents par catégorie.**
