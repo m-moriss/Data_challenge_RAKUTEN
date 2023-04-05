@@ -49,7 +49,7 @@ def load_dataset():
     X["texte"] = X.designation + " " + X.description.fillna('').astype(str)
     X["orig_texte"] = X.designation + " " + X.description.fillna('').astype(str)
     #X.drop(["productid", "imageid", "prdtypecode", "designation", "description"], axis=1, inplace=True)
- #   X.drop_duplicates(subset="texte", inplace=True)
+    X.drop_duplicates(subset="texte", inplace=True)
     #X["texte"] = X.texte.apply(strip_tags)
     
     return X_train, y_train, categories, X, categories_numbered, categories_alphasort
