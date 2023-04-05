@@ -4,6 +4,9 @@ import streamlit.components.v1 as html
 from PIL import Image, ImageOps
 import pandas as pd
 import path
+import requests
+from io import BytesIO
+
 
 from donnees import (
     load_dataset,
