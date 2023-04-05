@@ -276,7 +276,7 @@ Résultat : **nous ajouterons une variable nommé "catégorie" qui pourra faire 
             cols = st.columns([1]*nb_sample)
             index=0
             for indice, row in sample.iterrows():
-                filename = f"image_train/image_{row.imageid}_product_{row.productid}.jpg"
+                filename = f"img_train/image_{row.imageid}_product_{row.productid}.webp"
                 #filename = f"C:/Users/Morisseau1/DSPP/Donnees/images (1)/images/image_train/image_{row.imageid}_product_{row.productid}.jpg"
                 image = Image.open(filename)
                 cols[index].image(image, use_column_width=True)
