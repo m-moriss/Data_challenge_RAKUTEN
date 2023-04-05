@@ -229,7 +229,7 @@ RAKUTEN a mis à disposition les jeux de données organisés de la façon suivan
             for i, row in sample.iterrows():
                 filename = f"image_train/image_{row.imageid}_product_{row.productid}.jpg"
                 #filename = f"C:/Users/Morisseau1/DSPP/Donnees/images (1)/images/image_train/image_{row.imageid}_product_{row.productid}.jpg"
-                image = Image.open(filename,'rb')
+                image = Image.open(filename)
                 cols[index].image(image, use_column_width=True)
                 index += 1
 
