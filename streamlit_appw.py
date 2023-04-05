@@ -231,7 +231,6 @@ RAKUTEN a mis à disposition les jeux de données organisés de la façon suivan
                
                  filename = f"/image_train/image_{row.imageid}_product_{row.productid}.jpg"
                  image = Image.open(filename)
-                 st.image(image)
                  cols[index].image(image, use_column_width=True)
                  index += 1
 
