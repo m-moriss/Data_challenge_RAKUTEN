@@ -267,7 +267,7 @@ Résultat : **nous ajouterons une variable nommé "catégorie" qui pourra faire 
 
     tabs = st.tabs(list(categories.prdlabelcode.array))
 
-    nb_sample = 3
+    nb_sample = 7
     for i in range(0, len(categories)):
         with tabs[i]:
             st.markdown(f"<p><strong>Exemples d'annonces de la catégorie {categories.iloc[i].prdlabelcode}</strong></p>", unsafe_allow_html=True)
