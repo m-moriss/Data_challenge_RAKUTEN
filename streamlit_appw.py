@@ -227,10 +227,15 @@ RAKUTEN a mis à disposition les jeux de données organisés de la façon suivan
             cols = st.columns([1, 1, 1, 1, 1])
             index=0
             for i, row in sample.iterrows():
-                filename = f"/m-moriss/Data_challenge_RAKUTEN/blob/main/img_train/image_{row.imageid}_product_{row.productid}.jpg"
+                
+                url_icon = "https://raw.githubusercontent.com/m-moriss/Data_challenge_RAKUTEN/blob/main/img_train/image_{row.imageid}_product_{row.productid}.jpg"
+                response = requests.get(url_icon)
+                img = Image.open(BytesIO(response.content))
+               # filename = f"/m-moriss/Data_challenge_RAKUTEN/blob/main/img_train/image_{row.imageid}_product_{row.productid}.jpg"
                 #filename = f"C:/Users/Morisseau1/DSPP/Donnees/images (1)/images/image_train/image_{row.imageid}_product_{row.productid}.jpg"
-                image = Image.open(filename)
-                cols[index].image(image, use_column_width=True)
+               # image = Image.open(filename)
+               # cols[index].image(image, use_column_width=True)
+                cols[index].image(img, use_column_width=True)
                 index += 1
 
     draw_and_display_dataset_sample()
@@ -238,7 +243,8 @@ RAKUTEN a mis à disposition les jeux de données organisés de la façon suivan
     st.button("Redraw samples", on_click=draw_and_display_dataset_sample)
 
 
-
+    
+  
 ###########################
 # Exploration des données #
 ###########################
