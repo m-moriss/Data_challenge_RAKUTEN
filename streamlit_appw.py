@@ -268,16 +268,15 @@ Résultat : **nous ajouterons une variable nommé "catégorie" qui pourra faire 
     tabs = st.tabs(list(categories.prdlabelcode.array))
 
     nb_sample = 3
-    for i in range(1, len(categories)):
+    for i in range(0, len(categories)):
         with tabs[i]:
             st.markdown(f"<p><strong>Exemples d'annonces de la catégorie {categories.iloc[i].prdlabelcode}</strong></p>", unsafe_allow_html=True)
             category = categories.iloc[i].prdtypecode
             sample = X[y_train.prdtypecode == category].sample(nb_sample)
             cols = st.columns([1]*nb_sample)
-            index=1
+            index=0
             for indice, row in sample.iterrows():
                 filename = f"img_train/image_{row.imageid}_product_{row.productid}.webp"
-                #filename = f"C:/Users/Morisseau1/DSPP/Donnees/images (1)/images/image_train/image_{row.imageid}_product_{row.productid}.jpg"
                 image = Image.open(filename)
                 cols[index].image(image, use_column_width=True)
                 cols[index].write(f'<p class="titre_annonce">{row.designation[:50]}</p>', unsafe_allow_html=True)
