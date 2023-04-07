@@ -33,8 +33,8 @@ def load_dataset():
     # On charge le dataset d'entrainement
     X_train = pd.read_csv("X_train.csv", index_col=0)
     y_train = pd.read_csv("Y_train.csv", index_col=0)
-    #categories = pd.read_csv("categories.csv", sep="\t")
-    categories = pd.read_csv("categories.csv", sep=";")
+    categories = pd.read_csv("categories.csv", sep="\t")
+    #categories = pd.read_csv("categories.csv", sep=";")
 
     categories_alphasort = categories.reset_index().astype(str).sort_values(by='prdtypecode').reset_index()
     categories_alphasort.drop(['index'], axis=1, inplace=True)
