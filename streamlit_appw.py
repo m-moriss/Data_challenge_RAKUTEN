@@ -275,6 +275,9 @@ Résultat : **nous ajouterons une variable nommé "catégorie" qui pourra faire 
             cols = st.columns([1]*nb_sample)
             index=0
             for indice, row in sample.iterrows():
+                st.write(image_{row.imageid}_product_{row})
+            st.image(category_image)
+            
                 #filename = f"img_train/image_{row.imageid}_product_{row.productid}.webp"
                 filename = f"img_train/image_{row.imageid}_product_{row}.webp"
                 image = Image.open(filename)
