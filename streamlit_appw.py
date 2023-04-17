@@ -284,7 +284,6 @@ Résultat : **nous ajouterons une variable nommé "catégorie" qui pourra faire 
                     cols[index].write(row.description[:300])
                 index += 1
             category_image = f'categories-{"{:02d}".format(i)}n.webp'
-            #st.markdown("<br><p class=\"page_title_3\">Nuage de mot et fréquence des mots de la catégorie</p></br>", unsafe_allow_html=True)
             st.markdown("<p><strong>Nuage de mot et fréquence des mots de la catégorie</strong></p>", unsafe_allow_html=True)    
             st.write("""Pour avoir une idée plus précise du contenu du texte des annonces par catégorie, **nous avons réalisé des nuages de mots et des histogrammes avec les mots les plus fréquents par catégorie.**
             """)
@@ -292,17 +291,11 @@ Résultat : **nous ajouterons une variable nommé "catégorie" qui pourra faire 
 
     st.markdown('<p class="page_title_3">2. Analyse des annonces par catégories et par langues</p>', unsafe_allow_html=True)
 
-    #df = pd.read_csv('C:/Users/Morisseau1/DSPP/Donnees/X.csv')
-    #df_langues = pd.read_csv('C:/Users/Morisseau1/AppData/Roaming/Python/Python310/site-packages/streamlit/streamlit/rakuten/Repartition_langues.csv',sep=";")
     df_langues = pd.read_csv('Repartition_langues.csv',sep=";")
 
 
     class_distr = st.container()
-    #class_distr.markdown(
-    #    '''
-    # Class distribution
-    #The following interactive plot shows the count of cells per classes.
-    #''')
+
     class_distr.markdown('''
     Après avoir donné des labels à nos catégories, nous pouvons analyser la répartition des annonces par catégories.
     **Certaines catégories sont plus représentées** que d'autres.
@@ -325,17 +318,8 @@ Résultat : **nous ajouterons une variable nommé "catégorie" qui pourra faire 
     - Traiter les descriptions par langues ?
     ''',  unsafe_allow_html=True)
 
-    #st.dataframe(df_langues,800)  
     st.table(df_langues)
 
-#    st.write("""
-#Si l'on regarde le nombre d'annonces de produit par catégorie, on constate que le jeu de données est déséquilibré. Certaines catégories de produits contiennent beaucoup plus de produits que d’autres.
-#""")
-#   
-#    with Image.open(r'images/barchart_categorie.webp') as barchart_categorie:
-#        col1, col2, col3 = st.columns([1, 5, 1])
-#        col2.image(barchart_categorie, use_column_width=True)
-#
 
     st.markdown('<p class="page_title_3">3. Analyse des annonces par nombres de mots, présence de description</p>', unsafe_allow_html=True)
     st.write("""
