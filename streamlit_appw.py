@@ -229,8 +229,7 @@ RAKUTEN a mis à disposition les jeux de données organisés de la façon suivan
             cols = st.columns([1, 1, 1, 1, 1])
             index=0
             for i, row in sample.iterrows():
-
-                 #path_image=pathlib.Path(f'/image_train/image_{row.imageid}_product_{row.productid}.jpg')
+                
                  filename = f"img_train/image_{row.imageid}_product_{row.productid}.webp"
                  image = Image.open(filename)
                  cols[index].image(image, use_column_width=True)
@@ -276,7 +275,8 @@ Résultat : **nous ajouterons une variable nommé "catégorie" qui pourra faire 
             cols = st.columns([1]*nb_sample)
             index=0
             for indice, row in sample.iterrows():
-                filename = f"img_train/image_{row.imageid}_product_{row.productid}.webp"
+                #filename = f"img_train/image_{row.imageid}_product_{row.productid}.webp"
+                filename = f"img_train/image_{imageid}_product_{productid}.webp"
                 image = Image.open(filename)
                 cols[index].image(image, use_column_width=True)
                 cols[index].write(f'<p class="titre_annonce">{row.designation[:50]}</p>', unsafe_allow_html=True)
