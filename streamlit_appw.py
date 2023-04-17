@@ -488,7 +488,7 @@ Voici son architecture:
 """)
 
 
-    with Image.open('images/best_image.png') as img:
+    with Image.open('best_image.png') as img:
         col1, col2, col3 = st.columns([2, 2, 2])
         col2.image(img, use_column_width=True)
     
@@ -501,7 +501,7 @@ Voici son architecture:
         col2.image(img, use_column_width=True)
 
     
-    with Image.open('images/image_vgg16.PNG') as img:
+    with Image.open('image_vgg16.PNG') as img:
         col1, col2, col3 = st.columns([2, 2, 2])
         col2.image(img, use_column_width=True)
 
