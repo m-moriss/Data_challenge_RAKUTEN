@@ -466,7 +466,55 @@ Explication dataframe après preprocessing
     with Image.open('Matrice_RNN1.PNG') as img:
         col1, col2, col3 = st.columns([2, 2, 2])
         col2.image(img, use_column_width=True)
+        
+        
+##############################
+# Algorithmes sur les images #
+##############################
 
+if choose == "Algorithmes sur les images":
+    st.markdown('<p class="page_title_1">Algorithmes sur les images</p>', unsafe_allow_html=True)
+
+    st.write("""Nous avons testés plusieurs modèles:
+* Un reseau de neurone convolutif simple
+* Plusieurs CNN basés sur VGG16
+* Plusieurs CNN basés sur Xception
+""")
+
+    st.markdown("<p class=\"page_title_2\">Le meilleur modèle</p>", unsafe_allow_html=True)
+    st.write("""
+Le modele qui a donné les meilleurs résultats est basé sur VGG16.
+Voici son architecture:
+""")
+
+
+    with Image.open('images/best_image.png') as img:
+        col1, col2, col3 = st.columns([2, 2, 2])
+        col2.image(img, use_column_width=True)
+    
+    st.write("""
+    Nous obtenons une accuracy de 0.5375 sur notre jeu de test, ainsi que la matrice de confusion suivante.""")
+
+
+    with Image.open('image_accuracy.png') as img:
+        col1, col2, col3 = st.columns([2, 6, 2])
+        col2.image(img, use_column_width=True)
+
+    
+    with Image.open('images/image_vgg16.PNG') as img:
+        col1, col2, col3 = st.columns([2, 2, 2])
+        col2.image(img, use_column_width=True)
+
+    st.write("""
+Et les f1-scores suivants:
+""")
+
+
+    with Image.open('vgg16_f1score.PNG') as img:
+        col1, col2, col3 = st.columns([2, 2, 2])
+        col2.image(img, use_column_width=True)
+        
+        
 #########################
 # Algorithme multimodal #
 #########################
