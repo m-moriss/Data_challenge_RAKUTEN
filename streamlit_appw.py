@@ -271,7 +271,7 @@ Résultat : **nous ajouterons une variable nommé "catégorie" qui pourra faire 
         with tabs[i]:
             st.markdown(f"<p><strong>Exemples d'annonces de la catégorie {categories.iloc[i].prdlabelcode}</strong></p>", unsafe_allow_html=True)
             category = categories.iloc[i].prdtypecode
-            sample = X.loc[y_train.prdtypecode == category].sample(nb_sample)
+            sample = X[y_train.prdtypecode == category].sample(nb_sample)
             cols = st.columns([1]*nb_sample)
             index=0
             for indice, row in sample.iterrows():
