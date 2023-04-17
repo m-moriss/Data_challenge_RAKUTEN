@@ -276,7 +276,7 @@ Résultat : **nous ajouterons une variable nommé "catégorie" qui pourra faire 
             index=0
             for indice, row in sample.iterrows():
             
-                filename = f"img_train/image_{row.imageid}_product_{row}.webp"
+                filename = f"img_train/image_{row.imageid}_product_{row.imageid}.webp"
                 image = Image.open(filename)
                 cols[index].image(image, use_column_width=True)
                 cols[index].write(f'<p class="titre_annonce">{row.designation[:50]}</p>', unsafe_allow_html=True)
