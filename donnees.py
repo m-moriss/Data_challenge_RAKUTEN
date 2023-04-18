@@ -33,8 +33,8 @@ def load_dataset():
     # On charge le dataset d'entrainement
     X_train = pd.read_csv("X_train.csv", index_col=0)
     
-    X_train['imageid'] = X_train['imageid'].str.replace(',', '').astype(int)
-    X_train['productid'] = X_train['productid'].str.replace(',', '').astype(int)
+    X_train['imageid'] = X_train['imageid'].replace(',', '').astype(int)
+    X_train['productid'] = X_train['productid'].replace(',', '').astype(int)
     
     y_train = pd.read_csv("Y_train.csv", index_col=0)
     categories = pd.read_csv("categories.csv", sep="\t", decimal=',')
