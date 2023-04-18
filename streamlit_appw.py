@@ -389,7 +389,7 @@ Nous avons réalisé les actions suivantes:
     placeholder4 = st.empty()
     
     def draw_sample():
-        sample = X.sample(1)
+        sample = X.sample(2)
         orig_texte = sample.texte.tolist()[0]
         #placeholder.write()
         texte, vector = process_text(orig_texte)
