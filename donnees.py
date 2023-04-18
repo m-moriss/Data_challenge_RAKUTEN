@@ -32,7 +32,7 @@ def strip_tags(html):
 def load_dataset():
     # On charge le dataset d'entrainement
     #X_train = pd.read_csv("X_train.csv", index_col=0,thousands=",")
-    X_train = pd.read_csv("X_train.csv", index_col=0,dtype={'imageid': object,'productid': object})
+    X_train = pd.read_csv("X_train_echantillons.csv", index_col=0,dtype={'imageid': object,'productid': object})
     
     
    # X_train['imageid'] = X_train['imageid'].replace(',', '').astype(int)
