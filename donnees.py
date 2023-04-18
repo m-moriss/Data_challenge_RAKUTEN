@@ -31,7 +31,7 @@ def strip_tags(html):
 @st.experimental_singleton
 def load_dataset():
     # On charge le dataset d'entrainement
-    X_train = pd.read_csv("X_train.csv", index_col=0,thousands=None)
+    X_train = pd.read_csv("X_train.csv", index_col=0,thousands=",")
     
    # X_train['imageid'] = X_train['imageid'].replace(',', '').astype(int)
    # X_train['productid'] = X_train['productid'].replace(',', '').astype(int)
