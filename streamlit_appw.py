@@ -389,7 +389,7 @@ Nous avons réalisé les actions suivantes:
     placeholder4 = st.empty()
     
     def draw_sample():
-        sample = X.sample(2)
+        sample = X.sample(1)
         orig_texte = sample.texte.tolist()[0]
         #placeholder.write()
         texte, vector = process_text(orig_texte)
@@ -409,7 +409,8 @@ Nous avons réalisé les actions suivantes:
     st.write("""
 Les images ont été **réduites en résolution pour accelerer l'apprentissage des algorithmes.**
     """)
-    
+        st.write(X.head())
+        
 ############################
 # Algorithmes sur le texte #
 ############################
