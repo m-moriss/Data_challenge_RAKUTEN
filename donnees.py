@@ -40,7 +40,7 @@ def load_dataset():
     
     y_train = pd.read_csv("Y_train.csv", index_col=0)
     #categories = pd.read_csv("categories.csv", sep="\t", decimal=',')
-    categories = pd.read_csv("categories_echantillons.csv", sep=";")
+    categories = pd.read_csv("categories_echantillons.csv", sep="\t", decimal=',')
     #categories = pd.read_csv("categories.csv", sep=";")
 
     categories_alphasort = categories.reset_index().astype(str).sort_values(by='prdtypecode').reset_index()
