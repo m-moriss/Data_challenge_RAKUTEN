@@ -409,7 +409,7 @@ Nous avons réalisé les actions suivantes:
     st.write("""
 Les images ont été **réduites en résolution pour accelerer l'apprentissage des algorithmes.**
     """)
-    st.write(X.head())
+    st.write(X)
         
 ############################
 # Algorithmes sur le texte #
