@@ -629,7 +629,7 @@ if choose == "Démonstration":
         if annonce:
             row = X.loc[annonce]
             cols[2].write(f'<br><p class="titre_annonce_big">{row.designation}</p>', unsafe_allow_html=True)
-            cols[2].image(f"image_train/{row.image}")
+            cols[2].image(f"img_train/{row.image}")
             if str(row.description) != "nan":
                 cols[2].write(row.description)
 
