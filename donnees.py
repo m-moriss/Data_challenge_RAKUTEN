@@ -145,7 +145,7 @@ def load_vgg16_cnn_model(nb_of_classes):
 
 
 def get_image(image):
-  path = f"/image_train/{image}"
+  path = f"img_train/{image}"
   image = tf.keras.utils.load_img(
     path,
     grayscale=False,
