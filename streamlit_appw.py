@@ -621,7 +621,7 @@ if choose == "Démonstration":
             '',
             [None] + list(X[X.prdtypecode == prdtypecode].index),
             format_func=lambda option: (
-                X.loc[option].designation[:100] if option else "<Selectionnez une annonce>"
+                X.loc[option].designation[:49] if option else "<Selectionnez une annonce>"
             )
         )
         #annonce=41
