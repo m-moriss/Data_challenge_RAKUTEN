@@ -550,9 +550,9 @@ Les f1-score sur chaque classe sont les suivants:
 
     
     st.markdown(f"<p><strong>Exemples d'annonces de la catégorie 1281-Jeux de société</strong></p>", unsafe_allow_html=True)
-    nb_sample=6
+    nb_sample=2
     sample = X[y_train.prdtypecode == 1281].sample(nb_sample)
-    cols = st.columns([1]*nb_sample+[4])
+    cols = st.columns([1]*nb_sample+[1])
     index=0
     for indice, row in sample.iterrows():
         filename = f"img_train/image_{row.imageid}_product_{row.productid}.jpg"
@@ -580,9 +580,9 @@ Les f1-score sur chaque classe sont les suivants:
         index += 1
 
     st.markdown(f"<p><strong>Exemples d'annonces de la catégorie 1180-Figurines 2</strong></p>", unsafe_allow_html=True)
-    nb_sample=6
+    nb_sample=2
     sample = X[y_train.prdtypecode == 1180].sample(nb_sample)
-    cols = st.columns([1]*nb_sample+[4])
+    cols = st.columns([1]*nb_sample+[1])
     index=0
     for indice, row in sample.iterrows():
         filename = f"img_train/image_{row.imageid}_product_{row.productid}.jpg"
