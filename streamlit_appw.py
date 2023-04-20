@@ -581,79 +581,7 @@ Les f1-score sur chaque classe sont les suivants:
         
     st.write("""Il est difficile de faire la différence entre ces classes""")
 
-#################
-# Demonstration #
-#################
-'''
-if choose == "Démonstration":
-    st.markdown("<p class=\"page_title_2\">Démonstration du classifieur</p>", unsafe_allow_html=True)
 
-    cols = st.columns([3, 1, 7])
-
-    
-    categorie = cols[0].selectbox(
-        '',
-        list(categories.index),
-        format_func=lambda option: (
-            categories.loc[option].prdlabelcode if option else "<Selectionnez une catégorie>"
-        )
-    )
-    #categorie=6
-
-    if categorie:
-        prdtypecode = categories.loc[categorie].prdtypecode
-        annonce = cols[0].selectbox(
-            '',
-            [None] + list(X[X.prdtypecode == prdtypecode].index),
-            format_func=lambda option: (
-                X.loc[option].designation[:49] if option else "<Selectionnez une annonce>"
-            )
-        )
-        #annonce=41
-        
-        if annonce:
-            row = X.loc[annonce]
-            cols[2].write(f'<br><p class="titre_annonce_big">{row.designation}</p>', unsafe_allow_html=True)
-            cols[2].image(f"img_train/{row.image}")
-            if str(row.description) != "nan":
-                cols[2].write(row.description)
-
-
-            st.markdown("<p class=\"page_title_3\">Classification du texte (Régression Logistique)</p>", unsafe_allow_html=True)
-
-            texte, vector = process_text(row.texte)
-            texte_for_display = ', '.join(texte)
-            st.write(f"Le texte de l'annonce une fois préprocessé:<br><span style=\"font-style: italic;\">{texte_for_display}</span>", unsafe_allow_html=True)
-
-
-            def display_top_proba(prediction):
-                probas = pd.concat([
-                    categories_alphasort.prdlabelcode,
-                    pd.Series(np.round(prediction[0]*100, 3))
-                ], axis=1).rename({
-                    0: 'probabilité'
-                }, axis=1)
-                probas.sort_values(by='probabilité', ascending=False, inplace=True)
-                probas['probabilité'] = probas['probabilité'].apply(lambda x: round(x, 2))
-                st.write("Les classes prédites par le classifieur (top 5):")
-                st.write(probas.head(5))
-                st.bar_chart(data=probas, x='prdlabelcode', y="probabilité")
-
-            proba_texte = logistic_regression_model.predict_proba(vector.reshape(1, -1))
-            display_top_proba(proba_texte)
-
-            st.markdown("<p class=\"page_title_3\">Classification de l'image (Réseau de neurones à convolutions)</p>", unsafe_allow_html=True)
-
-            image = get_image(row.image)
-            proba_image = vgg16_cnn_model.predict(image.reshape((1,224,224,3)))
-            display_top_proba(proba_image)
-
-            st.markdown("<p class=\"page_title_3\">Classification multimodale</p>", unsafe_allow_html=True)
-            weight_texte = 0.8
-            weight_image = 0.5
-            proba_unifie = ((weight_texte * proba_texte + weight_image * proba_image)/(weight_image + weight_texte))
-            display_top_proba(proba_unifie)    
- '''
 #########
 # Bilan #
 #########
