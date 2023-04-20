@@ -657,9 +657,9 @@ if choose == "Démonstration":
 
             st.markdown("<p class=\"page_title_3\">Classification de l'image (Réseau de neurones à convolutions)</p>", unsafe_allow_html=True)
 
-            #image = get_image(row.image)
-            #proba_image = vgg16_cnn_model.predict(image.reshape((1,224,224,3)))
-            #display_top_proba(proba_image)
+            image = get_image(row.image)
+            proba_image = vgg16_cnn_model.predict(image.reshape((1,224,224,3)))
+            display_top_proba(proba_image)
 
             st.markdown("<p class=\"page_title_3\">Classification multimodale</p>", unsafe_allow_html=True)
             weight_texte = 0.8
