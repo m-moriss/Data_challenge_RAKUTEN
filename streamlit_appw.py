@@ -108,7 +108,7 @@ with st.sidebar:
             "Algorithmes sur le texte",
             "Algorithmes sur les images",
             "Algorithme multimodal",
-            "Démonstration",
+            #"Démonstration",
             "Bilan",
         ],
         icons=['play-btn', 'book', 'bar-chart', 'segmented-nav', 'body-text','images', 'toggles','bi bi-play-circle', 'flag'],
@@ -590,6 +590,9 @@ if choose == "Bilan":
     st.markdown('<p class="page_title_1">Bilan</p>', unsafe_allow_html=True)
     
     st.write("""
+    Notre modèle final a une bonne capacité de prédictions sur certaines catégories (liste ?). Cependant il présente encore quelques faiblesses pour d'autres catégories de produits(figurine, jeux de société).
+    Une analyse approndie des classes les moins bien prédites devrait nous permettra d'améliorer le modèle.
+    
     Ce projet nous a permis de nous confronter aux différentes étapes d'un projet date science de l'exploration des données, à la phase de preprocessing et la modélisation.
     Le sujet était un challenge car il necessitait la mobilisation de plusieurs notions vues lors du parcours : langage python, analyse de données textuelles, analyse des données images.
     
@@ -599,16 +602,35 @@ if choose == "Bilan":
     - Perspective 1
     - Perspective 2
     - Perspective 3
+    """) 
+    
+
+    st.markdown("<p class=\"page_title_2\">Perspectives d'amélioration</p>", unsafe_allow_html=True)
+
+    st.write("""La formation étant dense et intense, nous avons fait des choix concernant la méthodologie afin de respecter le planning projet. 
+    Par les perspectives envisageables, nous avons retenus :
+    *Réaliser la catégorisation manuelle des images par plusieurs personnes afin d'éviter les biais
+    *Eviter d'avoir des catégories à forte ressemblance (exemple : les catégories "figurines 1" et "figurines 2"
+    *Réaliser une modélisation par langues.
+   
     """)    
 
-
-
-# Livres, mangas, romans:               Lots de Livres et de Revues
-# Livres2:                              Livres > ebooks
-# Jeux videos:                          Jeux vidéo > Version physique
-# Jeux videos:                          Jeux video > Version dématérialisee
-# Figurines1:                           Figurines
-# Figurines2:                           Jeux de rôle et jeux de figurines
-# Accessoire jeux                      Accessoires jeux videos
-
-
+    st.markdown("<p class=\"page_title_2\">Difficultés rencontrées</p>", unsafe_allow_html=True)
+    
+    st.write("""Le projet necessitant la mobilisation de plusieurs notions nouvelles, nous avons dû faire preuve d'une grande organisation et d'adaptabilité.
+    Le temps entre la découverte de la notion et sa mise en pratique dans le projet étant parfois court.
+    Par ailleurs nous avons rencontrés plusieurs difficultés sur des modèles que nous souhaitions tester, du fait du grand volume de données. Nos équipements informatiques
+    n'étant pas adaptés pour ce type de travaux.
+    Ces contraintes techniques ont eu un grand impact sur le choix du modèle final.
+  
+    """) 
+    
+    
+    st.markdown("<p class=\"page_title_2\">Apport du projet et de la formation</p>", unsafe_allow_html=True)
+    
+    st.write("""Ce projet a été l'occasion pour les membres du groupe de renforcer leurs connaissances théoriques et d'apprendre les usages de nouveaux outils.
+    Martine étant issu d'un cursus Statistique et expérimenter dans l'exploitation de base de données,elle a pu se familiariser au langage Python et aux analyses 
+    de données textuelles et images".
+    Rémi, ingénieur informatique a davantage développer ses connaissances de traitement de données et de principes statistiques à des fins opérationnelles.
+  
+    """) 
