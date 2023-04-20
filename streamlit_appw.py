@@ -21,19 +21,6 @@ import numpy as np
 # pip install streamlit-option-menu
 # pip install beautifulsoup4 tensorflow
 
-# Screens:
-# * Introduction du projet
-#   * Challenge Data ENS: Rakuten fourni des données propriétaires
-#   * But du projet: classification multimodale
-# * Le dataset:
-#   * Explication des différents champs
-#   * [Dynamique] Choix dune catégorie: on affiche aléatoirement des annonces avec pour chacune: titre, description, image associée, nom de la catégorie quon a utilisé
-# * Exploration des données:
-#   * Le texte:
-#     * Affichage des différents barchart statiques
-#     * [Dynamique] Choix dune catégorie: on affiche les nuages de mots, les histogrammes de fréquence
-#   * Les images:
-#     * [Dynamique] Choix dune catégorie: on affiche les images avec les boundings box des objects
 
 
 title_color="#38a"
