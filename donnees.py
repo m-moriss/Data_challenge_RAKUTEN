@@ -116,7 +116,7 @@ def process_text(texte):
     vector = vectorizer.transform([" ".join(texte)]).astype('uint8')
     return texte, vector
     
-
+'''
 import tensorflow as tf
 from tensorflow.keras import layers
 from tensorflow.keras.applications.vgg16 import VGG16, preprocess_input
@@ -154,4 +154,4 @@ def get_image(image):
     interpolation='bilinear'
   )
   return tf.keras.preprocessing.image.img_to_array(image)
-
+'''
