@@ -196,11 +196,9 @@ La classe que devra prédire notre système pour cette annonce de produit est 'a
 if choose == "Le dataset":
     st.markdown('<p class="page_title_1">Le dataset</p>', unsafe_allow_html=True)
     st.write("""
+Les données sont la propriété du Rakuten Institue of Technology.
 Pour construire ce système de classification automatique nous avons à notre disposition un jeu de données extrait du site web Rakuten, composé des données textuelles et des images de 84916 annonces de produits. Ces annonces sont déjà classifiées, c'est-à-dire que pour chacune de ces annonces nous disposons d’un identifiant de catégorie unique. Grâce à ce jeu de données nous allons pouvoir utiliser des méthodes d’apprentissage automatique enfin d'entraîner des algorithmes à classifier automatiquement des annonces de produit.
 """)
-    st.markdown('<p class="page_title_2">Des données propriétaires</p>', unsafe_allow_html=True)
-
-    st.write("""Les données sont disponibles sous licence non ouverte, et sont strictement confidentielles et la propriété du Rakuten Institute of Technology""")
 
     st.markdown('<p class="page_title_2">Les données brutes</p>', unsafe_allow_html=True)
 
