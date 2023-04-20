@@ -623,10 +623,7 @@ if choose == "Bilan":
     st.markdown("<p class=\"page_title_2\">Apport du projet et de la formation</p>", unsafe_allow_html=True)
     
     st.write("""Cette formation a été l'occasion de découvrir ou enrichir nos compétences dans le secteur de la Data et de developper des compétences techniques de plus en plus
-    sollicités dans le monde professionnel. Notre curiosité nous a poussé à choisir un projet différent de ce que nous pouvions connaitre (Martine étant familière de l'exploitation
-    de données quantitatives ou de données issues de bases de données, découverte de la modélisation statistiques pour Rémi).""")
-    
-   st.write(""" Ce projet a été l'occasion pour les membres du groupe de **renforcer leurs connaissances théoriques et d'apprendre les usages de nouveaux outils**.
-   Indéniablement, ce projet occupe une place importante dans la formation, nous permettant de mettre en pratique l'ensemble des notions vues dans un contexte
+    sollicités dans le monde professionnel. Notre curiosité nous a poussé à choisir un projet différent de ce que nous pouvions connaitre au sein de nos environnements professionnels.
+    Indéniablement, ce projet occupe une place importante dans la formation, nous permettant de mettre en pratique l'ensemble des notions vues dans un contexte
     quasi-opérationnel.
     """) 
