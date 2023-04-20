@@ -10,8 +10,8 @@ import pathlib
 from donnees import (
     load_dataset,
     process_text,
-    load_vgg16_cnn_model,
-    get_image,
+    #load_vgg16_cnn_model,
+    #get_image,
     load_logisitc_regression_model
 )
 
