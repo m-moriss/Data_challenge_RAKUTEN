@@ -626,9 +626,7 @@ if choose == "Bilan":
     sollicités dans le monde professionnel. Notre curiosité nous a poussé à choisir un projet différent de ce que nous pouvions connaitre (Martine étant familière de l'exploitation
     de données quantitatives ou de données issues de bases de données, découverte de la modélisation statistiques pour Rémi).""")
     
-   st.write(""" Ce projet a été l'occasion pour les membres du groupe de **renforcer leurs connaissances théoriques et d'apprendre les usages de nouveaux outils.**
-    Indéniablement, ce projet occupe une place importante dans la formation, nous permettant de mettre en pratique l'ensemble des notions vues dans un contexte
+   st.write(""" Ce projet a été l'occasion pour les membres du groupe de **renforcer leurs connaissances théoriques et d'apprendre les usages de nouveaux outils**.
+   Indéniablement, ce projet occupe une place importante dans la formation, nous permettant de mettre en pratique l'ensemble des notions vues dans un contexte
     quasi-opérationnel.
-
-  
     """) 
