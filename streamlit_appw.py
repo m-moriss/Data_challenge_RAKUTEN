@@ -597,7 +597,7 @@ Les f1-score sur chaque classe sont les suivants:
 #################
 # Demonstration #
 #################
-
+'''
 if choose == "Démonstration":
     st.markdown("<p class=\"page_title_2\">Démonstration du classifieur</p>", unsafe_allow_html=True)
 
@@ -666,7 +666,7 @@ if choose == "Démonstration":
             weight_image = 0.5
             proba_unifie = ((weight_texte * proba_texte + weight_image * proba_image)/(weight_image + weight_texte))
             display_top_proba(proba_unifie)    
- 
+ '''
 #########
 # Bilan #
 #########
@@ -676,7 +676,9 @@ if choose == "Bilan":
     
     st.write("""
     Ce projet nous a permis de nous confronter aux différentes étapes d'un projet date science de l'exploration des données, à la phase de preprocessing et la modélisation.
-    Le sujet était un challenge car nous il necessitant la mobilisation de plusieurs notions vues lors du parcours : langage python, analyse de données textuelles, analyse des données images.
+    Le sujet était un challenge car il necessitait la mobilisation de plusieurs notions vues lors du parcours : langage python, analyse de données textuelles, analyse des données images.
+    
+    
     Notre modèle final a une bonne capacité de prédictions sur certaines catégories (liste ?). Cependant il présente encore quelques faiblesses pour d'autres catégories de produits.
     Liste les perspectives :
     - Perspective 1
