@@ -1,5 +1,12 @@
-# DEC21CDS_Rakuten
-DEC21CDS_Rakuten
+# Projet opérationnel dans le cadre de la formation Data science - Data scientest/Mines Paris Executive Education PSL
+
+*Vous trouverez ici les principaux travaux réalisés dans la cadre de la formation Data scientist.
+Afin de respecter la confidentialité des données, un échantillon aléatoire modifié a été généré.
+Ci-après les jalons et objectifs imposés lors de la formation:*
+
+
+
+
 Le projet qui vous a été assigné est : Rakuten
 Vous pourrez trouver le(s) jeu(x) de données ici :  https://challengedata.ens.fr/challenges/35
 
